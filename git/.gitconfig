@@ -1,0 +1,42 @@
+[user]
+	name = hyungjunn
+	email = hotfirebulldog@gmail.com
+[core]
+	excludesfile = /Users/hyungjunlim/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/hyungjunlim/.stCommitMsg
+[credential]
+	helper = osxkeychain
+[init]
+  defaultBranch = main
+[alias]
+  s = status -s
+  l = log -n 80 \
+      --color --graph --decorate=short \
+      --abbrev-commit \
+      --pretty=format:'%C(red)%h%C(auto)%d %s %C(green)(%cr)%C(bold blue) %an'
+  ll = log \
+       --color --graph --decorate=short \
+       --abbrev-commit \
+       --pretty=format:'%C(red)%H%C(auto)%d %s %C(green)(%cr)%C(bold blue) %an'
+  test = "!echo Hello World"
+  alias = "!# Prints all aliases.;\n\
+    git config --list \
+    | egrep '^alias.+' \
+    | sed -e 's/^alias\\.//' \
+    | sed -e 's/^[^=]*=/\\'$'\\033[31m&\\033[(B\\033[m/' \
+    | column -t -s'=' \
+    | sed 's/!#* *//; s/;$//' \
+    | cut -c1-85"
+  ch = "!git checkout $(git branch | fzf)"
+
+[push]
+	autoSetupRemote = true
+[http]
+	postBuffer = 524288000
