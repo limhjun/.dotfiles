@@ -76,3 +76,6 @@ export PATH=/Users/hyungjunlim/.opencode/bin:$PATH
 
 # bun completions
 [ -s "/Users/hyungjunlim/.bun/_bun" ] && source "/Users/hyungjunlim/.bun/_bun"
+
+# local secrets (not tracked in repo)
+[[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"

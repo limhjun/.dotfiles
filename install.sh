@@ -2,7 +2,7 @@
 set -euo pipefail
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-STOW_PACKAGES=(zsh bash git vim)
+STOW_PACKAGES=(zsh bash git vim ssh)
 
 # ── 1. Xcode Command Line Tools ──────────────────────────────────────────────
 if ! xcode-select -p &>/dev/null; then
