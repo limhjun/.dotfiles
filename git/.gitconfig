@@ -19,12 +19,12 @@
   s = status -s
   l = log -n 80 \
       --color --graph --decorate=short \
-      --abbrev-commit \
-      --pretty=format:'%C(red)%h%C(auto)%d %s %C(green)(%cr)%C(bold blue) %an'
+      --abbrev-commit --date=short \
+      --pretty=format:'%C(red)%h%C(auto)%d %s %C(green)(%cd)%C(bold blue) %an'
   ll = log \
        --color --graph --decorate=short \
-       --abbrev-commit \
-       --pretty=format:'%C(red)%H%C(auto)%d %s %C(green)(%cr)%C(bold blue) %an'
+       --abbrev-commit --date=short \
+       --pretty=format:'%C(red)%H%C(auto)%d %s %C(green)(%cd)%C(bold blue) %an'
   test = "!echo Hello World"
   alias = "!# Prints all aliases.;\n\
     git config --list \
