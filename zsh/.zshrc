@@ -34,6 +34,7 @@ export SDKROOT=$(xcrun --show-sdk-path)
 
 # Aliases
 alias ll='ls -la'
+alias clauded="claude --dangerously-skip-permissions"
 
 # SDKMAN (lazy loading)
 export JAVA_HOME="$HOME/.sdkman/candidates/java/current"
