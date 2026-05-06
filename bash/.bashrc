@@ -18,3 +18,4 @@ export TERM=xterm-256color
 
 # Added by Antigravity
 export PATH="/Users/hyungjunlim/.antigravity/antigravity/bin:$PATH"
+. "$HOME/.cargo/env"

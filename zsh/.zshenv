@@ -4,3 +4,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # HOMEBREW
 export PATH="/opt/homebrew/bin:$PATH"
+. "$HOME/.cargo/env"
